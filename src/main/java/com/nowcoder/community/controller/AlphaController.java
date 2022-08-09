@@ -74,7 +74,7 @@ public class AlphaController {
             @RequestParam(name="limit",required = false,defaultValue = "10")int limit) {
         System.out.println(current);
         System.out.println(limit);
-        String tem="{'a':'b'}";
+        String tem="students";
         return tem;
     }
 
