@@ -1,13 +1,19 @@
 package com.nowcoder.community;
 
+import java.security.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
+import com.nowcoder.community.dao.DiscussPostMapper;
 import com.nowcoder.community.dao.UserMapper;
+import com.nowcoder.community.entity.DiscussPost;
 import com.nowcoder.community.entity.User;
 
 @SpringBootTest
@@ -16,7 +22,10 @@ public class MapperTests {
     @Autowired
     private UserMapper userMapper;
 
-    @Test
+    @Autowired
+    private DiscussPostMapper discussPostMapper;
+
+    //@Test
     public void testSelectUser(){
         User user=userMapper.selectById(101);
         System.out.println("------------------------");
@@ -27,7 +36,7 @@ public class MapperTests {
         System.out.println(user);
     }
 
-    @Test
+    //@Test
     public void testInsertUser(){
         User user=new User();
         user.setUsername("test");
@@ -35,13 +44,19 @@ public class MapperTests {
         user.setSalt("abc");
         user.setEmail("test@qq.com");
         user.setHeaderUrl("http://www.nowcoder.com/101.png");
-        //user.setCreateTime(new java.sql.Date(0)); 
+
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//注意月和小时的格式为两个大写字母
+        java.util.Date date = new Date();//获得当前时间
+        String birthday = df.format(date);//将当前时间转换成特定格式的时间字符串，这样便可以插入到数据库中
+        System.out.println(birthday);
+
+        user.setCreateTime(birthday); 
         
-        //int rows=userMapper.insertUser(user);
-        //System.out.println(rows);
+        int rows=userMapper.insertUser(user);
+        System.out.println(rows);
     }
 
-    @Test
+    //@Test
     public void updateUser(){
         
         int rows=userMapper.updateStatus(150, 1);
@@ -54,6 +69,18 @@ public class MapperTests {
         System.out.println(rows);
 
 
+    }
+
+    @Test
+    public void testSelectPosts(){
+        List<DiscussPost> list= discussPostMapper.selectDiscussPosts(0, 0, 10);
+        for(DiscussPost post:list)
+        {
+            System.out.println(post);
+        }
+        
+        int rows=discussPostMapper.selectDiscussPostRows(0);
+        System.out.println(rows);
     }
 
 }

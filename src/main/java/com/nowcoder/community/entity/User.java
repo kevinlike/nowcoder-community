@@ -1,6 +1,6 @@
 package com.nowcoder.community.entity;
 
-import java.sql.Date;
+
 
 public class User {
     private int  id;
@@ -12,7 +12,7 @@ public class User {
     private int status;
     private String activationCode;
     private String headerUrl;
-    private Date createTime;
+    private String createTime;
     public int getId() {
         return id;
     }
@@ -67,11 +67,11 @@ public class User {
     public void setHeaderUrl(String headerUrl) {
         this.headerUrl = headerUrl;
     }
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreateTime(String birthday) {
+        this.createTime = birthday;
     }
     @Override
     public String toString() {
