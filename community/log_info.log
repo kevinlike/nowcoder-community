@@ -1,0 +1,5 @@
+2022-08-11 12:05:05,977 INFO [main] c.n.c.LoggerTests [StartupInfoLogger.java:55] Starting LoggerTests using Java 18.0.2 on wukaiwendeMacBook-Air.local with PID 47416 (started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-08-11 12:05:05,977 INFO [main] c.n.c.LoggerTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-08-11 12:05:06,599 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-08-11 12:05:06,716 INFO [main] c.n.c.LoggerTests [StartupInfoLogger.java:61] Started LoggerTests in 0.889 seconds (JVM running for 1.446)
+2022-08-11 12:05:06,896 INFO [main] c.n.c.LoggerTests [LoggerTests.java:19] info log
