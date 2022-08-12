@@ -51,4 +51,19 @@ public class HomeController {
         
         return "/index";
     }
+
+    @RequestMapping(path = "/kevinIndex",method = RequestMethod.GET)
+    public String getIndexPage(Model model){
+        //方法调用之前，springmvc会自动实例化Model和Page，并将Page注入Model
+        //所以，在thymeleaf中可以直接访问Page对象中的数据
+        List<User> list=userService.findAllUsers();
+        
+        
+        System.out.print("+++++++++++++++++++++++++++++++++++++");
+        //System.out.print(discussPosts);
+        //前端页面需要什么数据 就把什么数据加入model
+        model.addAttribute("list", list);
+        
+        return "/kevinIndex";
+    }
 }

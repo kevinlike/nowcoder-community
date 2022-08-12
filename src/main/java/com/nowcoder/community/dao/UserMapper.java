@@ -1,5 +1,7 @@
 package com.nowcoder.community.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +15,9 @@ public interface UserMapper {
     User selectByName(String username);
 
     User selectByEmail(String email);
+
+    //下列selectAllUsers()方法 由Kevin自主开发，用于选出所有用户信息
+    List<User> selectAllUsers();
 
     int insertUser(User user);
 
