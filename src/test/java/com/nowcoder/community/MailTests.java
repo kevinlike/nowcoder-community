@@ -16,14 +16,14 @@ public class MailTests {
     private MailClient mailClient;
 
     @Autowired
-    private TemplateEngine templateEngine;
+    private TemplateEngine templateEngine;//模版引擎，用于定位邮件模版位置
 
     //@Test
     public void testTextMail(){
         mailClient.sendMail("kevinkinglike@gmail.com", "test", "testTextMail");
     }
 
-    @Test
+    //@Test
     public void testHtmlMail(){
         Context context=new Context();
         context.setVariable("username", "Chelsey");

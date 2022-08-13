@@ -52,6 +52,7 @@ public class HomeController {
         return "/index";
     }
 
+    //kevin用于测试的网页，显示所有用户名
     @RequestMapping(path = "/kevinIndex",method = RequestMethod.GET)
     public String getIndexPage(Model model){
         //方法调用之前，springmvc会自动实例化Model和Page，并将Page注入Model
