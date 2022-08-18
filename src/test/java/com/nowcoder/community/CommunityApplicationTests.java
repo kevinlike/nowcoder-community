@@ -14,7 +14,10 @@ import org.springframework.test.context.ContextConfiguration;
 
 import com.nowcoder.community.config.AlphaConfig;
 import com.nowcoder.community.dao.AlphaDao;
+import com.nowcoder.community.dao.UserMapper;
+import com.nowcoder.community.entity.User;
 import com.nowcoder.community.service.AlphaService;
+import com.nowcoder.community.util.CommunityUtil;
 
 import net.bytebuddy.agent.ByteBuddyAgent.AttachmentProvider.Accessor.Simple;
 
@@ -30,7 +33,7 @@ public class CommunityApplicationTests implements ApplicationContextAware{
 		this.applicationContext=applicationContext;
 	}
 
-	@Test
+	//@Test
 	public void testApplicationContext(){
 		System.out.println("===================||++++++++++++++++++");
 		System.out.println(applicationContext);
@@ -42,13 +45,13 @@ public class CommunityApplicationTests implements ApplicationContextAware{
 		System.out.println(alphaDao.select());
 	}
 
-	@Test
+	//@Test
 	public void testBeanManagement(){
 		AlphaService alphaService=applicationContext.getBean(AlphaService.class);
 		System.out.println(alphaService);
 	}
 
-	@Test
+	//@Test
 	public void testBeanConfig(){
 		SimpleDateFormat simpleDateFormat = 
 				applicationContext.getBean(SimpleDateFormat.class);
@@ -64,12 +67,48 @@ public class CommunityApplicationTests implements ApplicationContextAware{
 
 	@Autowired
 	private SimpleDateFormat simpleDateFormat;
-	@Test
+	//@Test
 	public void testDI(){
 		System.out.println("===================||------------------");
 		System.out.println(alphaDao);
 		System.out.println(alphaService);
 		System.out.println(simpleDateFormat);
+	}
+
+
+	@Autowired
+	private UserMapper userMapper;
+
+	//测试设置用户密码
+	//@Test
+	public void testUserSetPassword(){
+		String username="xixi";
+		User user =userMapper.selectByName(username);
+		String password="123"+user.getSalt();
+		password=CommunityUtil.md5(password);
+		System.out.println(password);
+		user.setPassword(password);
+		
+	}
+
+	//测试用户密码是否与数据库匹配
+	@Test
+	public void testUserPassword(){
+		String password="123f9ead";
+		password=CommunityUtil.md5(password);
+		User user =userMapper.selectByName("xixi");
+		System.out.println("...............................");
+        System.out.println(password);
+        if(!password.equals(user.getPassword()))
+        {
+            System.out.println("///////////////////////////////");
+            System.out.println(password);
+            System.out.println(user.getPassword());
+        }
+		else
+		{
+			System.out.println("密码匹配");
+		}
 	}
 
 }
