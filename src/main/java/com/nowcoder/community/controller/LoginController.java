@@ -17,15 +17,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
 
 import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 import com.google.code.kaptcha.Producer;
+import com.nowcoder.community.dao.UserMapper;
 import com.nowcoder.community.entity.User;
 import com.nowcoder.community.service.UserService;
 import com.nowcoder.community.util.CommunityConstant;
+import com.nowcoder.community.util.CommunityUtil;
+import com.nowcoder.community.util.MailClient;
 
 @Controller
 public class LoginController implements CommunityConstant{
@@ -37,6 +44,12 @@ public class LoginController implements CommunityConstant{
 
     @Autowired
     private Producer kaptchaProducer;
+
+    @Autowired
+    private TemplateEngine templateEngine;
+
+    @Autowired
+    private MailClient mailClient;
 
     @Value("${server.servlet.context-path}")
     private String contextPath;
@@ -141,6 +154,68 @@ public class LoginController implements CommunityConstant{
             return "/site/login";
         }
 
+    }
+
+    @RequestMapping(path="/logout",method = RequestMethod.GET)
+    public String logout(@CookieValue("ticket") String ticket){
+        userService.logout(ticket);
+        return "redirect:/login";
+    }
+
+    @RequestMapping(path = "/forget",method = RequestMethod.GET)
+    public String getForgetPage(){
+        return "/site/forget";
+    }
+
+    @RequestMapping(path="/getVerificationCode",method=RequestMethod.POST)
+    @ResponseBody
+    public int getVriationCode(String email,HttpSession session){
+        System.out.println(email);
+        
+        //Map<String,Object> map=userService.getVerificationCode(email);
+
+        if(StringUtils.isBlank(email))
+        {
+            return 0;//发送失败
+            
+        }
+        else
+        {
+            String verificationCode=CommunityUtil.generateUUID().toString().substring(0,5);
+            session.setAttribute("code", verificationCode);
+            Context context=new Context();
+            context.setVariable("email", email);
+            context.setVariable("verificationCode", verificationCode);
+            String content=templateEngine.process("/mail/forget",context);
+            mailClient.sendMail(email, "找回密码", content);
+            return 1;//发送成功
+        }
+        
+    }
+
+    @RequestMapping(path = "/forget",method = RequestMethod.POST)
+    public String checkVerificationCode(String code,String email,String password,Model model,HttpSession session){
+        String verificationCode=(String)session.getAttribute("code");
+        if(!code.equals(verificationCode))
+        {
+            model.addAttribute("codeMsg","验证码不正确！");
+            return "/site/forget";
+        }
+        Map<String,Object> map=userService.resetPassword(email, password);
+        if(!map.isEmpty())
+        {
+            System.out.println("--------------------");
+            model.addAttribute("emailMsg",map.get("emailMsg"));
+            
+            model.addAttribute("passwordMsg",map.get("passwordMsg"));
+            return "/site/forget";
+        }
+        else
+        {
+            System.out.println("++++++++++++++++++++");
+            return "redirect:/login";
+        }
+        
     }
      
 }

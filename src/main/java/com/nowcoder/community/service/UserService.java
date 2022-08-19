@@ -51,6 +51,8 @@ public class UserService implements CommunityConstant{
         return userMapper.selectById(id);
     }
 
+
+
     public List<User> findAllUsers(){
         return userMapper.selectAllUsers();
     }
@@ -159,14 +161,14 @@ public class UserService implements CommunityConstant{
         }
 
         //验证密码
-        System.out.println("...............................");
-        System.out.println(password);
+        //System.out.println("...............................");
+        //System.out.println(password);
         password=CommunityUtil.md5(password+user.getSalt());
-        if(!password.equals(user.getPassword()))
+        if(!password.equals(user.getPassword()))//不能用”==“测试是否相等，只能用equals，因为“==”只比较两个地址是否相同，不看字符串是否相同
         {
-            System.out.println("///////////////////////////////");
-            System.out.println(password);
-            System.out.println(user.getPassword());
+            //System.out.println("///////////////////////////////");
+            //System.out.println(password);
+            //System.out.println(user.getPassword());
             map.put("passwordMsg","密码不正确！");
             return map;
         }
@@ -182,7 +184,38 @@ public class UserService implements CommunityConstant{
 
         return map;
 
+    }
 
+    public void logout(String ticket){
+        loginTicketMapper.updateStatus(ticket, 1);
+    }
+
+
+    //修改密码
+    public Map<String,Object> resetPassword(String email,String password){
+        
+        Map<String,Object> map=new HashMap<>();
+        if(email==null||email.isEmpty())
+        {
+            map.put("emailMsg", "邮箱不能为空!");
+            return map;
+        }
+        User user=userMapper.selectByEmail(email);
+        if(user==null)
+        {
+            map.put("emailMsg", "邮箱不存在!");
+            return map;
+        }
+        
+        if(password==null||password.isEmpty())
+        {
+            map.put("passwordMsg","密码不能为空");
+            return map;
+        }
+        password=CommunityUtil.md5(password+user.getSalt());
+        int id=user.getId();
+        userMapper.updatePassword(id, password);
+        return map;
 
     }
 

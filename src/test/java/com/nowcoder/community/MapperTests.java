@@ -108,8 +108,6 @@ public class MapperTests {
         loginTicket=loginTicketMapper.selectByTicket("abc");
         System.out.println(loginTicket);
 
-        
-
     }
 
 }
