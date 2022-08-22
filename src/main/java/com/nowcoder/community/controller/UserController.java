@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -113,5 +115,18 @@ public class UserController {
         }catch(IOException e){
             logger.error("读取失败："+e.getMessage());
         }
+    }
+
+    @RequestMapping(path="/updatePassword",method = RequestMethod.POST)
+    public String getHeader(Model model,String formerPassword,String newPassword){
+        User user=hostHolder.getUser();
+        int userId=user.getId();
+        Map<String,Object> map=userService.updatePassword(userId, formerPassword, newPassword);
+        if(!map.isEmpty())
+        {
+            model.addAttribute("codeError", map.get("error"));
+            return "/site/setting";
+        }
+        return "redirect:/login";
     }
 }

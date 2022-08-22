@@ -191,7 +191,7 @@ public class UserService implements CommunityConstant{
     }
 
 
-    //修改密码
+    //忘记密码后修改密码
     public Map<String,Object> resetPassword(String email,String password){
         
         Map<String,Object> map=new HashMap<>();
@@ -226,5 +226,22 @@ public class UserService implements CommunityConstant{
 
     public int updateHeader(int userId,String headerUrl){
         return userMapper.updateHeader(userId, headerUrl);
+    }
+
+    //记得原密码，并修改密码
+    public Map<String,Object> updatePassword(int userId,String formerPassword,String newPassword){
+        Map<String,Object> map=new HashMap<>();
+        User user=userMapper.selectById(userId);
+        formerPassword+=user.getSalt();
+        formerPassword=CommunityUtil.md5(formerPassword);
+        if(!formerPassword.equals(user.getPassword()))
+        {
+            map.put("error", "原密码不正确");
+            return map;
+        }
+        newPassword+=user.getSalt();
+        newPassword=CommunityUtil.md5(newPassword);
+        userMapper.updatePassword(userId, newPassword);
+        return map;
     }
 }
