@@ -178,7 +178,7 @@ public class UserService implements CommunityConstant{
         loginTicket.setUserId(user.getId());
         loginTicket.setTicket(CommunityUtil.generateUUID());
         loginTicket.setStatus(0);
-        loginTicket.setExpired("2022/8/22 18:18:18");
+        loginTicket.setExpired("2022-8-22 18:18:18");
         loginTicketMapper.insertLoginTicket(loginTicket);
         map.put("ticket", loginTicket.getTicket());
 
@@ -219,4 +219,12 @@ public class UserService implements CommunityConstant{
 
     }
 
+    public LoginTicket findLoginTicket(String ticket)
+    {
+        return loginTicketMapper.selectByTicket(ticket);
+    }
+
+    public int updateHeader(int userId,String headerUrl){
+        return userMapper.updateHeader(userId, headerUrl);
+    }
 }

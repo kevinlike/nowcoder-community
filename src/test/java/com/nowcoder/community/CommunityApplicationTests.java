@@ -92,7 +92,7 @@ public class CommunityApplicationTests implements ApplicationContextAware{
 	}
 
 	//测试用户密码是否与数据库匹配
-	@Test
+	//@Test
 	public void testUserPassword(){
 		String password="123f9ead";
 		password=CommunityUtil.md5(password);
@@ -109,6 +109,13 @@ public class CommunityApplicationTests implements ApplicationContextAware{
 		{
 			System.out.println("密码匹配");
 		}
+	}
+
+	@Test
+	public void test(){
+		String numbers="01234";
+		numbers=numbers.substring(numbers.lastIndexOf("1"));
+		System.out.println(numbers);
 	}
 
 }
