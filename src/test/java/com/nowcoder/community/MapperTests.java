@@ -1,6 +1,5 @@
 package com.nowcoder.community;
 
-import java.security.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -108,6 +107,20 @@ public class MapperTests {
         loginTicket=loginTicketMapper.selectByTicket("abc");
         System.out.println(loginTicket);
 
+    }
+
+    @Test
+    public void testInserDiscussPost(){
+        DiscussPost discussPost=new DiscussPost();
+        discussPost.setUserId(155);
+        discussPost.setTitle("testTitle");
+        discussPost.setType(1);
+        discussPost.setStatus(1);
+        discussPost.setScore(8.0);
+        discussPost.setCreateTime("2022-8-26 11:30:20");
+        discussPost.setContent("这是一个测试的帖子");
+        discussPost.setCommentCount(0);
+        discussPostMapper.insertDiscussPost(discussPost);
     }
 
 }

@@ -1,9 +1,9 @@
 package com.nowcoder.community;
 
-import java.sql.Date;
+
 import java.text.SimpleDateFormat;
 
-import org.junit.jupiter.api.Test;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,14 +12,14 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.test.context.ContextConfiguration;
 
-import com.nowcoder.community.config.AlphaConfig;
 import com.nowcoder.community.dao.AlphaDao;
 import com.nowcoder.community.dao.UserMapper;
 import com.nowcoder.community.entity.User;
 import com.nowcoder.community.service.AlphaService;
 import com.nowcoder.community.util.CommunityUtil;
 
-import net.bytebuddy.agent.ByteBuddyAgent.AttachmentProvider.Accessor.Simple;
+
+
 
 @SpringBootTest
 @ContextConfiguration(classes = CommunityApplication.class)//将配置类设置为和正式环境一样
@@ -111,11 +111,13 @@ public class CommunityApplicationTests implements ApplicationContextAware{
 		}
 	}
 
-	@Test
+	//@Test
 	public void test(){
 		String numbers="01234";
 		numbers=numbers.substring(numbers.lastIndexOf("1"));
 		System.out.println(numbers);
 	}
+
+	
 
 }

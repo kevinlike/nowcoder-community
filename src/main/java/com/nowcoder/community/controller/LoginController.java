@@ -2,7 +2,7 @@ package com.nowcoder.community.controller;
 
 import java.awt.image.BufferedImage;
 import java.io.OutputStream;
-import java.net.http.HttpResponse;
+
 import java.util.Map;
 
 import javax.imageio.ImageIO;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang3.StringUtils;
-import org.mybatis.logging.LoggerFactory;
+
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,9 +25,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-import com.fasterxml.jackson.annotation.JsonCreator.Mode;
+
 import com.google.code.kaptcha.Producer;
-import com.nowcoder.community.dao.UserMapper;
+
 import com.nowcoder.community.entity.User;
 import com.nowcoder.community.service.UserService;
 import com.nowcoder.community.util.CommunityConstant;

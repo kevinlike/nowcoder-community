@@ -1,3 +1,1 @@
-2022-08-21 16:16:07,993 WARN [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [AbstractApplicationContext.java:591] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'welcomePageHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping]: Factory method 'welcomePageHandlerMapping' threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
-	Syntax error, insert ";" to complete Statement
-
+2022-08-25 20:06:48,346 WARN [main] c.n.c.LoggerTests [LoggerTests.java:20] warn log

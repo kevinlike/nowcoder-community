@@ -1,7 +1,7 @@
 package com.nowcoder.community.config;
 
 import java.text.SimpleDateFormat;
-import java.util.regex.Pattern;
+
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

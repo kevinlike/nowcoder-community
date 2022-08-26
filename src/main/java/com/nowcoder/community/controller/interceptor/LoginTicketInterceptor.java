@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.nowcoder.community.entity.LoginTicket;
 import com.nowcoder.community.entity.User;
 import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.CommunityUtil;
+
 import com.nowcoder.community.util.CookieUtil;
 import com.nowcoder.community.util.HostHolder;
 

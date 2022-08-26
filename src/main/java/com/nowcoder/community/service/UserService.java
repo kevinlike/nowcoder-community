@@ -24,8 +24,6 @@ import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.CommunityUtil;
 import com.nowcoder.community.util.MailClient;
 
-import ch.qos.logback.core.joran.conditional.ElseAction;
-
 @Service
 public class UserService implements CommunityConstant{
     
