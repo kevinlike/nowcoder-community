@@ -13,13 +13,16 @@ public class TransactionTests {
     @Autowired
     private AlphaService alphaService;
 
+
+    //里面故意留了bug
     //@Test
     public void testSave1(){
         Object obj=alphaService.save1();
         System.out.println(obj);
     }
 
-    @Test
+    //里面故意留了bug
+    //@Test
     public void testSave2(){
         Object obj=alphaService.save1();
         System.out.println(obj);

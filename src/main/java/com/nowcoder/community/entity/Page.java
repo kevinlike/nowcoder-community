@@ -74,6 +74,7 @@ public class Page {
 
     //获取选页栏结束页码
     public int getTo(){
+        //如果目前页码+2大于总页码数则最多显示到总页码数
         int to=current+2;
         int total=getTotal();
         return to>total?total:to;

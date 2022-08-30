@@ -1,16 +1,2 @@
-2022-08-27 12:27:01,663 INFO [main] c.n.c.TransactionTests [StartupInfoLogger.java:55] Starting TransactionTests using Java 18.0.2 on wukaiwendeMacBook-Air.local with PID 68350 (started by wukaiwen in /Users/wukaiwen/code/java/community)
-2022-08-27 12:27:01,666 INFO [main] c.n.c.TransactionTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
-2022-08-27 12:27:02,392 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-08-27 12:27:02,497 INFO [main] c.n.c.TransactionTests [StartupInfoLogger.java:61] Started TransactionTests in 0.991 seconds (JVM running for 1.444)
-2022-08-27 12:27:02,657 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
-2022-08-27 12:27:02,760 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
-2022-08-27 12:27:02,824 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
-2022-08-27 12:27:02,828 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
-2022-08-27 12:43:53,303 INFO [main] c.n.c.TransactionTests [StartupInfoLogger.java:55] Starting TransactionTests using Java 18.0.2 on wukaiwendeMacBook-Air.local with PID 68830 (started by wukaiwen in /Users/wukaiwen/code/java/community)
-2022-08-27 12:43:53,305 INFO [main] c.n.c.TransactionTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
-2022-08-27 12:43:54,073 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
-2022-08-27 12:43:54,171 INFO [main] c.n.c.TransactionTests [StartupInfoLogger.java:61] Started TransactionTests in 1.495 seconds (JVM running for 1.849)
-2022-08-27 12:43:54,336 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
-2022-08-27 12:43:54,416 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
-2022-08-27 12:43:54,475 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
-2022-08-27 12:43:54,478 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-08-30 10:10:42,617 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-08-30 10:10:42,621 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
