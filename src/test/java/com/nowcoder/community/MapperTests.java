@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +13,11 @@ import org.springframework.test.context.ContextConfiguration;
 
 import com.nowcoder.community.dao.DiscussPostMapper;
 import com.nowcoder.community.dao.LoginTicketMapper;
+import com.nowcoder.community.dao.MessageMapper;
 import com.nowcoder.community.dao.UserMapper;
 import com.nowcoder.community.entity.DiscussPost;
 import com.nowcoder.community.entity.LoginTicket;
+import com.nowcoder.community.entity.Message;
 import com.nowcoder.community.entity.User;
 
 @SpringBootTest
@@ -28,6 +31,9 @@ public class MapperTests {
 
     @Autowired
     private LoginTicketMapper loginTicketMapper;
+
+    @Autowired
+    private MessageMapper messageMapper;
 
     //@Test
     public void testSelectUser(){
@@ -109,7 +115,7 @@ public class MapperTests {
 
     }
 
-    @Test
+    //@Test
     public void testInserDiscussPost(){
         DiscussPost discussPost=new DiscussPost();
         discussPost.setUserId(155);
@@ -121,6 +127,27 @@ public class MapperTests {
         discussPost.setContent("这是一个测试的帖子");
         discussPost.setCommentCount(0);
         discussPostMapper.insertDiscussPost(discussPost);
+    }
+
+    @Test
+    public void testSelectLetters(){
+        List<Message> list=messageMapper.selectConversations(111, 0, 20);
+        for(Message message:list){
+            System.out.println(message);
+        }
+        int cnt=messageMapper.selectConversationCount(111);
+        System.out.println(cnt);
+
+        list=messageMapper.selectLetters("111_112", 0, 10);
+        for(Message message:list){
+            System.out.println(message);
+        }
+
+        cnt=messageMapper.selectLetterCount("111_112");
+        System.out.println(cnt);
+
+        cnt=messageMapper.selectLetterUnreadCount(131,"111_131" );
+        System.out.println(cnt);
     }
 
 }
