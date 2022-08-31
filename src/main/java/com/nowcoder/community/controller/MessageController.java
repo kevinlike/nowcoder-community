@@ -132,6 +132,7 @@ public class MessageController {
     @RequestMapping(path="/letter/send",method = RequestMethod.POST)
     @ResponseBody
     public String sendLetter(String toName,String content){
+        Integer.valueOf("abc");
         User fromUser=hostHolder.getUser();
         User toUser=userService.findUserByName(toName);
         if(toUser==null){
