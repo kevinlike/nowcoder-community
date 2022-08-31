@@ -33,5 +33,21 @@ function send_letter() {
 
 function delete_msg() {
 	// TODO 删除数据
+	var btn=this;
+	var messageId=$(btn).prev().val();
+	console.log(messageId);
+	$.post(
+		CONTEXT_PATH+"/letter/delete",
+		{"messageId":messageId},
+		function(data){
+			data=$.parseJSON(data);
+			if(data.code==0){
+				window.location.reload();
+			}
+			else{
+				alert(data.msg);
+			}
+		}
+	)
 	$(this).parents(".media").remove();
 }

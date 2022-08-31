@@ -3,6 +3,7 @@ package com.nowcoder.community.controller;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -152,6 +153,18 @@ public class MessageController {
         message.setConversationId(conversationId);
         messageService.addMessage(message);
 
+        return CommunityUtil.getJSONString(0);
+    }
+
+    @RequestMapping(path="/letter/delete",method = RequestMethod.POST)
+    @ResponseBody
+    public String deleteLetter(Integer messageId){
+        List<Integer> ids=new LinkedList<>();
+        ids.add(messageId);
+        int row=messageService.deleteMessage(ids);
+        if(row==0){
+            return CommunityUtil.getJSONString(1, "没有删除任何信息");
+        }
         return CommunityUtil.getJSONString(0);
     }
 
