@@ -1,0 +1,165 @@
+2022-09-01 11:36:33,770 INFO [restartedMain] c.n.c.CommunityApplication [StartupInfoLogger.java:55] Starting CommunityApplication using Java 18.0.2 on wukaiwendeAir with PID 25517 (/Users/wukaiwen/code/java/community/target/classes started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 11:36:33,788 INFO [restartedMain] c.n.c.CommunityApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 11:36:33,814 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-01 11:36:33,815 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-01 11:36:34,417 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2022-09-01 11:36:34,421 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-01 11:36:34,422 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-09-01 11:36:34,422 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-01 11:36:34,450 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-09-01 11:36:34,450 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 635 ms
+2022-09-01 11:36:34,861 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 11:36:35,049 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-09-01 11:36:35,057 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2022-09-01 11:36:35,066 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2022-09-01 11:36:35,070 INFO [restartedMain] c.n.c.CommunityApplication [StartupInfoLogger.java:61] Started CommunityApplication in 1.514 seconds (JVM running for 1.688)
+2022-09-01 11:36:46,588 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-01 11:36:46,588 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-09-01 11:36:46,589 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
+2022-09-01 11:36:46,623 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2022-09-01 11:36:46,692 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2022-09-01 11:37:25,144 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-09-01 11:37:25,150 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-09-01 13:50:53,738 INFO [restartedMain] c.n.c.CommunityApplication [StartupInfoLogger.java:55] Starting CommunityApplication using Java 18.0.2 on wukaiwendeAir with PID 27409 (/Users/wukaiwen/code/java/community/target/classes started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 13:50:53,738 INFO [restartedMain] c.n.c.CommunityApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 13:50:53,767 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-01 13:50:53,767 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-01 13:50:54,335 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2022-09-01 13:50:54,340 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-01 13:50:54,341 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-09-01 13:50:54,341 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-01 13:50:54,366 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-09-01 13:50:54,366 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 598 ms
+2022-09-01 13:50:54,684 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 13:50:54,807 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-09-01 13:50:54,815 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2022-09-01 13:50:54,821 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2022-09-01 13:50:54,825 INFO [restartedMain] c.n.c.CommunityApplication [StartupInfoLogger.java:61] Started CommunityApplication in 1.293 seconds (JVM running for 1.494)
+2022-09-01 13:51:12,155 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-01 13:51:12,156 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-09-01 13:51:12,156 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2022-09-01 13:51:12,172 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.DiscussPostService.findDiscussPostRows].
+2022-09-01 13:51:12,188 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2022-09-01 13:51:12,255 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2022-09-01 13:51:12,283 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.DiscussPostService.findDiscussPosts].
+2022-09-01 13:51:12,291 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:12,295 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:12,297 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:12,298 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:12,299 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:12,301 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:12,302 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:12,303 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:12,304 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:12,305 INFO [http-nio-8080-exec-1] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:12]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,676 INFO [http-nio-8080-exec-6] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.login].
+2022-09-01 13:51:33,705 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findLoginTicket].
+2022-09-01 13:51:33,707 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,709 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.DiscussPostService.findDiscussPostRows].
+2022-09-01 13:51:33,711 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.DiscussPostService.findDiscussPosts].
+2022-09-01 13:51:33,716 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,718 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,719 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,721 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,722 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,723 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,725 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,726 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,727 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,728 INFO [http-nio-8080-exec-7] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:33,746 INFO [http-nio-8080-exec-8] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findLoginTicket].
+2022-09-01 13:51:33,748 INFO [http-nio-8080-exec-8] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:33]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:36,884 INFO [http-nio-8080-exec-3] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:36]，访问了[com.nowcoder.community.service.UserService.findLoginTicket].
+2022-09-01 13:51:36,892 INFO [http-nio-8080-exec-3] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:36]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:36,899 INFO [http-nio-8080-exec-3] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:36]，访问了[com.nowcoder.community.service.MessageService.findConversationCount].
+2022-09-01 13:51:36,914 INFO [http-nio-8080-exec-3] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:36]，访问了[com.nowcoder.community.service.MessageService.findConversations].
+2022-09-01 13:51:36,918 INFO [http-nio-8080-exec-3] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:36]，访问了[com.nowcoder.community.service.MessageService.findLetterUnreadCount].
+2022-09-01 13:51:36,956 INFO [http-nio-8080-exec-4] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:36]，访问了[com.nowcoder.community.service.UserService.findLoginTicket].
+2022-09-01 13:51:36,959 INFO [http-nio-8080-exec-4] c.n.c.c.a.ServiceLogAspect [ServiceLogAspect.java:43] 用户[0:0:0:0:0:0:0:1]，在[2022-09-01 13:51:36]，访问了[com.nowcoder.community.service.UserService.findUserById].
+2022-09-01 13:51:43,514 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-09-01 13:51:43,519 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-09-01 14:10:14,344 INFO [restartedMain] c.n.c.CommunityApplication [StartupInfoLogger.java:55] Starting CommunityApplication using Java 18.0.2 on wukaiwendeAir with PID 27872 (/Users/wukaiwen/code/java/community/target/classes started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 14:10:14,350 INFO [restartedMain] c.n.c.CommunityApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 14:10:14,374 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-01 14:10:14,374 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-01 14:10:14,968 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2022-09-01 14:10:14,974 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-01 14:10:14,974 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-09-01 14:10:14,974 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-01 14:10:14,998 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-09-01 14:10:14,998 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 623 ms
+2022-09-01 14:10:15,421 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 14:10:15,617 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-09-01 14:10:15,626 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2022-09-01 14:10:15,633 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2022-09-01 14:10:15,638 INFO [restartedMain] c.n.c.CommunityApplication [StartupInfoLogger.java:61] Started CommunityApplication in 1.504 seconds (JVM running for 1.677)
+2022-09-01 14:10:21,930 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-01 14:10:21,931 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-09-01 14:10:21,931 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2022-09-01 14:10:21,952 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2022-09-01 14:10:22,020 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2022-09-01 14:11:11,077 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-09-01 14:11:11,083 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-09-01 19:19:50,264 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 18.0.2 on wukaiwendeAir with PID 50888 (started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 19:19:50,265 INFO [main] c.n.c.RedisTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 19:19:50,555 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-01 19:19:50,556 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-01 19:19:50,567 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-09-01 19:19:51,534 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 19:19:51,784 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 1.689 seconds (JVM running for 2.064)
+2022-09-01 19:24:01,825 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 18.0.2 on wukaiwendeAir with PID 51004 (started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 19:24:01,826 INFO [main] c.n.c.RedisTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 19:24:02,084 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-01 19:24:02,086 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-01 19:24:02,096 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-09-01 19:24:02,999 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 19:24:03,230 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 1.558 seconds (JVM running for 1.913)
+2022-09-01 19:25:12,559 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 18.0.2 on wukaiwendeAir with PID 51060 (started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 19:25:12,560 INFO [main] c.n.c.RedisTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 19:25:12,811 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-01 19:25:12,812 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-01 19:25:12,821 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-09-01 19:25:13,743 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 19:25:14,009 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 1.591 seconds (JVM running for 1.898)
+2022-09-01 19:29:37,502 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 18.0.2 on wukaiwendeAir with PID 51169 (started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 19:29:37,503 INFO [main] c.n.c.RedisTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 19:29:37,794 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-01 19:29:37,796 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-01 19:29:37,806 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-09-01 19:29:38,761 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 19:29:38,997 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 1.645 seconds (JVM running for 1.986)
+2022-09-01 19:57:16,052 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 18.0.2 on wukaiwendeAir with PID 51845 (started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 19:57:16,053 INFO [main] c.n.c.RedisTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 19:57:16,320 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-01 19:57:16,322 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-01 19:57:16,333 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-09-01 19:57:17,249 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 19:57:17,496 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 1.594 seconds (JVM running for 1.943)
+2022-09-01 20:04:06,924 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 18.0.2 on wukaiwendeAir with PID 52001 (started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 20:04:06,925 INFO [main] c.n.c.RedisTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 20:04:07,223 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-01 20:04:07,226 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-01 20:04:07,237 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-09-01 20:04:08,160 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 20:04:08,446 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 1.686 seconds (JVM running for 2.039)
+2022-09-01 20:17:18,866 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 18.0.2 on wukaiwendeAir with PID 52308 (started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 20:17:18,867 INFO [main] c.n.c.RedisTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 20:17:19,137 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-01 20:17:19,138 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-01 20:17:19,147 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-09-01 20:17:20,073 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 20:17:20,367 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 1.648 seconds (JVM running for 1.97)
+2022-09-01 20:22:23,259 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 18.0.2 on wukaiwendeAir with PID 52443 (started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 20:22:23,260 INFO [main] c.n.c.RedisTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 20:22:23,544 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-01 20:22:23,545 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-01 20:22:23,557 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-09-01 20:22:24,480 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 20:22:24,718 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 1.609 seconds (JVM running for 1.935)
+2022-09-01 20:34:04,480 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests using Java 18.0.2 on wukaiwendeAir with PID 52680 (started by wukaiwen in /Users/wukaiwen/code/java/community)
+2022-09-01 20:34:04,481 INFO [main] c.n.c.RedisTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-01 20:34:04,747 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-01 20:34:04,748 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-01 20:34:04,760 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-09-01 20:34:05,722 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:57] Adding welcome page template: index
+2022-09-01 20:34:05,979 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 1.657 seconds (JVM running for 1.992)
