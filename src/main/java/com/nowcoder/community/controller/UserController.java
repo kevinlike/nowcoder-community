@@ -23,15 +23,17 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.nowcoder.community.annotation.LoginRequired;
 import com.nowcoder.community.entity.User;
+import com.nowcoder.community.service.FollowService;
 import com.nowcoder.community.service.LikeService;
 import com.nowcoder.community.service.UserService;
+import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.CommunityUtil;
 import com.nowcoder.community.util.HostHolder;
 import com.nowcoder.community.util.RedisKeyUtil;
 
 @Controller
 @RequestMapping("/user")
-public class UserController {
+public class UserController implements CommunityConstant{
     
 
     private static final Logger logger=LoggerFactory.getLogger(UserController.class);
@@ -53,6 +55,9 @@ public class UserController {
 
     @Autowired
     private LikeService likeService;
+
+    @Autowired
+    private FollowService followService;
 
     @LoginRequired//自定义的注解，表示只有在登录时才能访问
     @RequestMapping(path="/setting",method=RequestMethod.GET)
@@ -149,6 +154,18 @@ public class UserController {
         int likeCount=likeService.findUserLikeCount(userId);
         model.addAttribute("likeCount", likeCount);
 
+        //登录用户
+        User loginUser=hostHolder.getUser();
+
+        //关注状态
+        boolean hasFollowed=loginUser==null?false:followService.hasFollowed(loginUser.getId(), ENTITY_TYPE_USER, userId);
+        model.addAttribute("hasFollowed", hasFollowed);
+        //粉丝数量
+        long followerCount=followService.findFollowerCount(ENTITY_TYPE_USER, userId);
+        model.addAttribute("followerCount", followerCount);
+        //关注的目标数量
+        long followeeCount=followService.findFolloweeCount(userId, ENTITY_TYPE_USER);
+        model.addAttribute("followeeCount", followeeCount);
         return "/site/profile";
     }
 }
