@@ -19,6 +19,7 @@ public class DiscussPostService {
     @Autowired
     private SensitiveFilter sensitiveFilter;
 
+    //用户id为0，则不考虑用户id，若用户id！=0则选取对应用户发布的帖子
     public List<DiscussPost> findDiscussPosts(int userId,int offset,int limit){
         return discussPostMapper.selectDiscussPosts(userId, offset, limit);
     } 
