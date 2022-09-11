@@ -36,6 +36,10 @@ public class ServiceLogAspect {
 
         //获取用户ip地址
         ServletRequestAttributes attributes= (ServletRequestAttributes)RequestContextHolder.getRequestAttributes();
+        //如果是kafka的consumer调用了service则没有attributes，所以需要排除这一情况
+        if(attributes==null){
+            return;
+        }
         HttpServletRequest request=attributes.getRequest();
         String ip=request.getRemoteHost();
         String now=TimeUtil.date2String(new Date());

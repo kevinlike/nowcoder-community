@@ -15,8 +15,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.nowcoder.community.entity.Comment;
 import com.nowcoder.community.entity.DiscussPost;
+import com.nowcoder.community.entity.Event;
 import com.nowcoder.community.entity.Page;
 import com.nowcoder.community.entity.User;
+import com.nowcoder.community.event.EventProducer;
 import com.nowcoder.community.service.CommentService;
 import com.nowcoder.community.service.DiscussPostService;
 import com.nowcoder.community.service.LikeService;
@@ -44,6 +46,10 @@ public class CommentController implements CommunityConstant{
     @Autowired
     private DiscussPostService discussPostService;
 
+    @Autowired
+    private EventProducer eventProducer;
+
+    //添加评论
     @RequestMapping(path="/add/{discussPostId}",method = RequestMethod.POST)
     public String addComment(@PathVariable("discussPostId") int discussPostId,Comment comment){
         comment.setUserId(hostHolder.getUser().getId());
@@ -51,9 +57,28 @@ public class CommentController implements CommunityConstant{
         comment.setCreateTime(TimeUtil.date2String(new Date()));
         commentService.addComment(comment);
 
+        //触发评论事件,调用生产者将数据加入kafka
+        Event event=new Event()
+            .setTopic(TOPIC_COMMENT)
+            .setUserId(hostHolder.getUser().getId())
+            .setEntityType(comment.getEntityType())
+            .setEntityId(comment.getEntityId())
+            .setData("postId", discussPostId);
+        //如果评论对象是一个帖子，则通知帖子的发布者
+        if(comment.getEntityType()==ENTITY_TYPE_POST){
+            DiscussPost target=discussPostService.findDiscussPostById(comment.getEntityId());
+            event.setEntityUserId(target.getUserId());
+        }//若评论的对象是一个回复，则通知回复的发布者
+        else if(comment.getEntityType()==ENTITY_TYPE_COMMENT){
+            Comment target=commentService.findCommentById(comment.getEntityId());
+            event.setEntityUserId(target.getUserId());
+        }
+        eventProducer.fireEvent(event);
+        
         return "redirect:/discuss/detail/"+discussPostId;
     }
 
+    //展示某用户的回帖列表
     @RequestMapping(path="/my-reply/{userId}",method = RequestMethod.GET)
     public String getMyReply(@PathVariable("userId") int userId,Model model,Page page){
         User user =userService.findUserById(userId);
