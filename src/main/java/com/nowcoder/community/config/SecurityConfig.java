@@ -144,6 +144,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements Comm
                         "/follow",
                         "/unfollow")
                     .hasAnyAuthority(AUTHORITY_USER,AUTHORITY_ADMIN,AUTHORITY_MODERATOR)//不同页面需要的权限设置
+                .antMatchers(
+                    "/discuss/top",
+                    "/discuss/wonderful"
+                )
+                .hasAnyAuthority(AUTHORITY_MODERATOR)
+                .antMatchers(
+                    "/discuss/delete"
+                )
+                .hasAnyAuthority(AUTHORITY_ADMIN)
                 .anyRequest().permitAll()//其余所有请求都允许
                 .and().csrf().disable();
                 //.antMatchers("/admin").hasAnyAuthority("ADMIN")//不同页面需要的权限

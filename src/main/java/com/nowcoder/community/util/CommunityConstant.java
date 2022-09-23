@@ -28,6 +28,8 @@ public interface CommunityConstant {
     String TOPIC_FOLLOW="follow";
     //主题
     String TOPIC_PUBLISH="publish";
+    //删帖主题
+    String TOPIC_DELETE="delete";
 
     //系统用户id
     int SYSTEM_USER_ID=1;
