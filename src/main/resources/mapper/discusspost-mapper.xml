@@ -31,8 +31,8 @@
             and user_id=#{userId}
         </if>
     </select>
-
-    <insert id="insertDiscussPost" parameterType="DiscussPost">
+    <!-- 使用keyProperty指明主键，这样在新增数据后，discusspost实体立马就会被赋予一个id-->
+    <insert id="insertDiscussPost" parameterType="DiscussPost" keyProperty="id">
         insert into discuss_post(<include refid="insertFields"></include>)
         values(#{userId},#{title},#{content},#{type},#{status},#{createTime},#{commentCount},#{score})
     </insert>

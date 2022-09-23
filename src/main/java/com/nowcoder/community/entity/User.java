@@ -1,8 +1,10 @@
 package com.nowcoder.community.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
-public class User {
+//下面的这个注解JsonIgnoreProperties是用于解决redis和security之间的bug的
+@JsonIgnoreProperties({"enabled","accountNonExpired", "accountNonLocked", "credentialsNonExpired", "authorities"})
+public class User{
     private int  id;
     private String username;
     private String password;
@@ -79,6 +81,4 @@ public class User {
                 + ", headerUrl=" + headerUrl + ", id=" + id + ", password=" + password + ", salt=" + salt + ", status="
                 + status + ", type=" + type + ", username=" + username + "]";
     }
-
-    
 }

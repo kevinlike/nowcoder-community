@@ -3,6 +3,8 @@ package com.nowcoder.community.service;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -14,6 +16,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
@@ -296,6 +302,30 @@ public class UserService implements CommunityConstant{
 
     public User findUserByName(String username){
         return userMapper.selectByName(username);
+    }
+
+    /* 
+     * 因为我们绕过了security的认证机制，所以securitycontext里面没有用户的权限，
+     * 但是filter还是需要读取权限才能决定网页的访问权，此处就是通过用户类型（type）来设置并获取其权限
+     */
+    public Collection<? extends GrantedAuthority> getAuthorities(int userId){
+        User user=this.findUserById(userId);
+
+        List<GrantedAuthority> list=new ArrayList<>();
+        list.add(new GrantedAuthority() {
+            @Override
+            public String getAuthority() {
+                switch(user.getType()){
+                    case 1:
+                        return AUTHORITY_ADMIN;
+                    case 2:
+                        return AUTHORITY_MODERATOR;
+                    default:
+                        return AUTHORITY_USER;
+                }
+            }
+        });
+        return list;
     }
 
     

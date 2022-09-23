@@ -74,6 +74,17 @@ public class CommentController implements CommunityConstant{
             event.setEntityUserId(target.getUserId());
         }
         eventProducer.fireEvent(event);
+        //如果是对帖子的评论，则需要加入
+        if(comment.getEntityType()==ENTITY_TYPE_POST){
+            //触发发帖事件，使用kafka异步将发布的帖子加入es中，用于搜索
+            event=new Event()
+                .setTopic(TOPIC_PUBLISH)
+                .setUserId(comment.getUserId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(discussPostId);//因为在discusspost-mapper中insertpost处设置了keyProperty，所以这里可以直接取到id
+            eventProducer.fireEvent(event);
+        }
+        
         
         return "redirect:/discuss/detail/"+discussPostId;
     }

@@ -19,8 +19,9 @@ public class WebMvcConfig implements WebMvcConfigurer{
     @Autowired
     private LoginTicketInterceptor loginTicketInterceptor;
 
-    @Autowired
-    private LoginRequiredInterceptor loginRequiredInterceptor;
+    //一开始的登录验证是用拦截器实现的，后来改用security，所以这个方法废弃了
+    // @Autowired
+    // private LoginRequiredInterceptor loginRequiredInterceptor;
 
     @Autowired
     private MessageInterceptor messageInterceptor;
@@ -38,8 +39,9 @@ public class WebMvcConfig implements WebMvcConfigurer{
         registry.addInterceptor(loginTicketInterceptor)
         .excludePathPatterns("/**/*.css","/**/*.js","/**/*.png","/**/*.jpg","/**/*.jpeg");
 
-        registry.addInterceptor(loginRequiredInterceptor)
-        .excludePathPatterns("/**/*.css","/**/*.js","/**/*.png","/**/*.jpg","/**/*.jpeg");
+        //登录认证由拦截器改为由security实现，此处废弃
+        // registry.addInterceptor(loginRequiredInterceptor)
+        // .excludePathPatterns("/**/*.css","/**/*.js","/**/*.png","/**/*.jpg","/**/*.jpeg");
 
         registry.addInterceptor(messageInterceptor)
         .excludePathPatterns("/**/*.css","/**/*.js","/**/*.png","/**/*.jpg","/**/*.jpeg");

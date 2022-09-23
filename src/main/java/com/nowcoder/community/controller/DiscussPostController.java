@@ -18,8 +18,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.nowcoder.community.entity.Comment;
 import com.nowcoder.community.entity.DiscussPost;
+import com.nowcoder.community.entity.Event;
 import com.nowcoder.community.entity.Page;
 import com.nowcoder.community.entity.User;
+import com.nowcoder.community.event.EventProducer;
 import com.nowcoder.community.service.CommentService;
 import com.nowcoder.community.service.DiscussPostService;
 import com.nowcoder.community.service.LikeService;
@@ -48,6 +50,9 @@ public class DiscussPostController implements CommunityConstant{
     @Autowired
     private CommentService commentService;
 
+    @Autowired
+    private EventProducer eventProducer;
+
     @RequestMapping(path="/add",method = RequestMethod.POST)
     @ResponseBody
     public String addDiscussPost(String title,String content){
@@ -62,6 +67,15 @@ public class DiscussPostController implements CommunityConstant{
         post.setContent(content);
         post.setCreateTime(TimeUtil.date2String(new Date()));
         discussPostService.addDiscussPost(post);
+
+
+        //触发发帖事件，使用kafka异步将发布的帖子加入es中，用于搜索
+        Event event=new Event()
+            .setTopic(TOPIC_PUBLISH)
+            .setUserId(user.getId())
+            .setEntityType(ENTITY_TYPE_POST)
+            .setEntityId(post.getId());//因为在discusspost-mapper中insertpost处设置了keyProperty，所以这里可以直接取到id
+        eventProducer.fireEvent(event);
 
         //报错未来统一处理
         return CommunityUtil.getJSONString(0, "发布成功");

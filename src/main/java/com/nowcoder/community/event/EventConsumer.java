@@ -12,8 +12,11 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 import com.alibaba.fastjson.JSONObject;
+import com.nowcoder.community.entity.DiscussPost;
 import com.nowcoder.community.entity.Event;
 import com.nowcoder.community.entity.Message;
+import com.nowcoder.community.service.DiscussPostService;
+import com.nowcoder.community.service.ElasticsearchService;
 import com.nowcoder.community.service.MessageService;
 import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.CommunityUtil;
@@ -27,6 +30,15 @@ public class EventConsumer implements CommunityConstant{
     @Autowired
     private MessageService messageService;
 
+    @Autowired
+    private DiscussPostService discussPostService;
+
+    @Autowired
+    private ElasticsearchService elasticsearchService;
+
+
+
+    //用于消费关注评论点赞事件，生成系统通知
     @KafkaListener(topics={TOPIC_COMMENT,TOPIC_FOLLOW,TOPIC_LIKE})
     public void handleCommentMessage(ConsumerRecord record){
         if(record==null||record.value()==null){
@@ -64,4 +76,20 @@ public class EventConsumer implements CommunityConstant{
         messageService.addMessage(message);
     }
 
+    //消费发帖事件，发帖的内容需要加到es中，用于搜索功能使用
+    @KafkaListener(topics = {TOPIC_PUBLISH})
+    public void handlePublishMessage(ConsumerRecord record){
+        if(record==null||record.value()==null){
+            logger.error("消息的内容为空！");
+            return;
+        }
+        //将生产者生产的消息解析为json格式，需要注明数据类型（Event.class）
+        Event event=JSONObject.parseObject(record.value().toString(), Event.class);
+        if(event==null){
+            logger.error("消息格式错误！");
+            return;
+        }
+        DiscussPost post=discussPostService.findDiscussPostById(event.getEntityId());
+        elasticsearchService.saveDiscussPost(post);
+    }
 }
