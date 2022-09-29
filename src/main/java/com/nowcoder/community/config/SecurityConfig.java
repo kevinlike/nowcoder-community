@@ -150,7 +150,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements Comm
                 )
                 .hasAnyAuthority(AUTHORITY_MODERATOR)
                 .antMatchers(
-                    "/discuss/delete"
+                    "/discuss/delete",
+                    "/data/**"
                 )
                 .hasAnyAuthority(AUTHORITY_ADMIN)
                 .anyRequest().permitAll()//其余所有请求都允许

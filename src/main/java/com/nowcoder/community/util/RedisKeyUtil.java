@@ -13,6 +13,8 @@ public class RedisKeyUtil {
     private static final String PREFIX_KAPTCHA="kaptcha";
     private static final String PREFIX_TICKET="ticket";
     private static final String PREFIX_USER="user";
+    private static final String PREFIX_UV="uv";
+    private static final String PREFIX_DAU="dau";
 
     //某个实体的赞
     //like:entity:entityType:entityId ->set(userId)
@@ -53,4 +55,27 @@ public class RedisKeyUtil {
     public static String getUserKey(int userId){
         return PREFIX_USER+SPLIT+userId;
     }
+
+    //unique visitor独立访客，通过ip地址排重统计数据，每次访问都统计，没登录的用户也会被统计
+    //单日UV
+    public static String getUVKey(String date){
+        return PREFIX_UV+SPLIT+date;
+    }
+
+    //区间UV
+    public static String getUVKey(String startDate,String endDate){
+        return PREFIX_UV+SPLIT+startDate+SPLIT+endDate;
+    }
+
+    //daily active user日活跃用户，通过用户id排重统计
+    //单日DAU
+    public static String getDAUKey(String date){
+        return PREFIX_DAU+SPLIT+date;
+    }
+
+    //区间DAU
+    public static String gatDAUKey(String startDate,String endDate){
+        return PREFIX_DAU+SPLIT+startDate+SPLIT+endDate;
+    }
+
 }

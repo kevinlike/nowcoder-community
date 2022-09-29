@@ -1,0 +1,54 @@
+2022-09-28 21:20:48,291 WARN [I/O dispatcher 1] o.e.c.RestClient [RequestLogger.java:72] request [GET http://localhost:9200/] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 21:20:48,323 WARN [main] o.e.c.RestClient [RequestLogger.java:72] request [HEAD http://localhost:9200/discusspost] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 21:20:48,705 WARN [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [UserDetailsServiceAutoConfiguration.java:88] 
+
+Using generated security password: 122c44ba-4ce2-43c8-a171-e21b2bb51419
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-28 21:20:48,729 WARN [main] o.s.s.c.a.w.b.WebSecurity [WebSecurity.java:307] You are asking Spring Security to ignore Ant [pattern='/resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-28 21:22:39,026 WARN [I/O dispatcher 1] o.e.c.RestClient [RequestLogger.java:72] request [GET http://localhost:9200/] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 21:22:39,040 WARN [main] o.e.c.RestClient [RequestLogger.java:72] request [HEAD http://localhost:9200/discusspost] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 21:22:39,396 WARN [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [UserDetailsServiceAutoConfiguration.java:88] 
+
+Using generated security password: 653ca883-b6b4-4e5a-84c3-440df18ced81
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-28 21:22:39,420 WARN [main] o.s.s.c.a.w.b.WebSecurity [WebSecurity.java:307] You are asking Spring Security to ignore Ant [pattern='/resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-28 21:34:18,952 WARN [I/O dispatcher 1] o.e.c.RestClient [RequestLogger.java:72] request [GET http://localhost:9200/] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 21:34:18,966 WARN [main] o.e.c.RestClient [RequestLogger.java:72] request [HEAD http://localhost:9200/discusspost] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 21:34:19,359 WARN [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [UserDetailsServiceAutoConfiguration.java:88] 
+
+Using generated security password: 98475e4e-7dfd-48e4-beb2-ccb16dedd7e5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-28 21:34:19,385 WARN [main] o.s.s.c.a.w.b.WebSecurity [WebSecurity.java:307] You are asking Spring Security to ignore Ant [pattern='/resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-28 21:48:41,610 WARN [I/O dispatcher 1] o.e.c.RestClient [RequestLogger.java:72] request [GET http://localhost:9200/] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 21:48:41,623 WARN [main] o.e.c.RestClient [RequestLogger.java:72] request [HEAD http://localhost:9200/discusspost] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 21:48:42,010 WARN [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [UserDetailsServiceAutoConfiguration.java:88] 
+
+Using generated security password: eb03c334-5692-4d2b-b47b-cb77c2d5c938
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-28 21:48:42,034 WARN [main] o.s.s.c.a.w.b.WebSecurity [WebSecurity.java:307] You are asking Spring Security to ignore Ant [pattern='/resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-28 21:49:23,572 WARN [I/O dispatcher 1] o.e.c.RestClient [RequestLogger.java:72] request [GET http://localhost:9200/] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 21:49:23,585 WARN [main] o.e.c.RestClient [RequestLogger.java:72] request [HEAD http://localhost:9200/discusspost] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 21:49:23,997 WARN [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [UserDetailsServiceAutoConfiguration.java:88] 
+
+Using generated security password: c54844f3-93d0-4072-999c-8633d5d261f4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-28 21:49:24,025 WARN [main] o.s.s.c.a.w.b.WebSecurity [WebSecurity.java:307] You are asking Spring Security to ignore Ant [pattern='/resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-28 22:02:27,620 WARN [I/O dispatcher 1] o.e.c.RestClient [RequestLogger.java:72] request [GET http://localhost:9200/] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 22:02:27,632 WARN [main] o.e.c.RestClient [RequestLogger.java:72] request [HEAD http://localhost:9200/discusspost] returned 1 warnings: [299 Elasticsearch-7.17.4-79878662c54c886ae89206c685d9f1051a9d6411 "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2022-09-28 22:02:28,075 WARN [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [UserDetailsServiceAutoConfiguration.java:88] 
+
+Using generated security password: 894e313a-5c36-4bbd-9c51-2dab0b870cdd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-09-28 22:02:28,116 WARN [main] o.s.s.c.a.w.b.WebSecurity [WebSecurity.java:307] You are asking Spring Security to ignore Ant [pattern='/resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
