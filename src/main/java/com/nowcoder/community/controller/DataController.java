@@ -39,19 +39,19 @@ public class DataController {
         return "forward:/data";
     }
 
-        //统计网站DAU
-        @RequestMapping(path="/data/dau",method = RequestMethod.POST)
-        public String getDAU(@DateTimeFormat(pattern = "yyyy-MM-dd") Date start,
-                            @DateTimeFormat(pattern = "yyyy-MM-dd")Date end,Model model){
-            long dau=dataService.calculateDAU(start, end);
-            model.addAttribute("dauResult", dau);
-            model.addAttribute("dauStartDate", start);
-            model.addAttribute("dauEndDate", end);
-    
-            //可以直接传回模版
-            //return "/site/admin/data";
-            //也可以使用forward方法，表示此函数处理了一半，继续传递给一个平级的方法继续处理
-            return "forward:/data";
-        }
+    //统计网站DAU
+    @RequestMapping(path="/data/dau",method = RequestMethod.POST)
+    public String getDAU(@DateTimeFormat(pattern = "yyyy-MM-dd") Date start,
+                        @DateTimeFormat(pattern = "yyyy-MM-dd")Date end,Model model){
+        long dau=dataService.calculateDAU(start, end);
+        model.addAttribute("dauResult", dau);
+        model.addAttribute("dauStartDate", start);
+        model.addAttribute("dauEndDate", end);
+
+        //可以直接传回模版
+        //return "/site/admin/data";
+        //也可以使用forward方法，表示此函数处理了一半，继续传递给一个平级的方法继续处理
+        return "forward:/data";
+    }
 
 }

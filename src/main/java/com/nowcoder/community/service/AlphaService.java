@@ -5,7 +5,11 @@ import java.util.Date;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
@@ -25,6 +29,8 @@ import com.nowcoder.community.util.TimeUtil;
 
 @Service
 public class AlphaService {
+
+    private static final Logger logger=LoggerFactory.getLogger(AlphaService.class);
 
     @Autowired
     private AlphaDao alphaDao;
@@ -121,5 +127,17 @@ public class AlphaService {
                 return null;
             }
         });
+    }
+
+    //先在ThreadPoolConfig中配置@EnableAsync，然后在需要的地方注入@Async，就可以实现该方法的多线程运行
+    @Async
+    public void execute1(){
+        logger.debug("execute1");
+    }
+
+    //定时任务
+    @Scheduled(initialDelay=5000,fixedRate = 1000)
+    public void execute2(){
+        logger.debug("execute2");
     }
 }
