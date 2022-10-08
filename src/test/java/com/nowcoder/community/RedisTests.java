@@ -70,6 +70,7 @@ public class RedisTests {
 
         redisTemplate.opsForSet().add(redisKey,"lily","sara","ben");
 
+        System.out.println("--------------------------------------");
         System.out.println(redisTemplate.opsForSet().size(redisKey));
         System.out.println(redisTemplate.opsForSet().pop(redisKey));
         System.out.println(redisTemplate.opsForSet().members(redisKey));
@@ -164,7 +165,7 @@ public class RedisTests {
      * 这其中就有大量的重复数据，在这样的任务上，hll的性能表现就很好
      */
     //将3组数据合并，再统计合并后的重复数据的独立总数
-    @Test
+    //@Test
     public void testHyperLogLogUnion(){
         String redisKey2="test:hll:02";
         for (int i = 1; i <= 10000; i++) {
@@ -188,7 +189,7 @@ public class RedisTests {
 
     //BitMap
     //统计一组数据的bool值
-    @Test
+    //@Test
     public void testBitMap(){
         String redisKey="test:bm:01";
         //记录,false的值不用存,默认为false
@@ -215,7 +216,7 @@ public class RedisTests {
 
     }
     //统计三组数据的bool值，并对这3组数据做or运算
-    @Test
+    //@Test
     public void testBitMapOperation(){
         String redisKey2="test:bm:02";
         redisTemplate.opsForValue().setBit(redisKey2, 0, true);

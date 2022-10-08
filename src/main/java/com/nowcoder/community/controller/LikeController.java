@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +17,7 @@ import com.nowcoder.community.service.LikeService;
 import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.CommunityUtil;
 import com.nowcoder.community.util.HostHolder;
+import com.nowcoder.community.util.RedisKeyUtil;
 
 @Controller
 public class LikeController implements CommunityConstant{
@@ -28,6 +30,9 @@ public class LikeController implements CommunityConstant{
 
     @Autowired
     private EventProducer eventProducer;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @RequestMapping(path="/like",method=RequestMethod.POST)
     @ResponseBody
@@ -55,6 +60,14 @@ public class LikeController implements CommunityConstant{
                 .setUserId(hostHolder.getUser().getId())
                 .setData("postId", postId);
             eventProducer.fireEvent(event);
+        }
+
+        if(entityType==ENTITY_TYPE_POST){
+            //重新计算帖子的热度得分
+            String redisKey=RedisKeyUtil.getPostScoreKey();
+            redisTemplate.opsForSet().add(redisKey, postId);
+            //System.out.println("///////////////////////");
+            //System.out.println(redisTemplate.opsForSet().members(redisKey).toString());
         }
         return CommunityUtil.getJSONString(0, null,map);
     }

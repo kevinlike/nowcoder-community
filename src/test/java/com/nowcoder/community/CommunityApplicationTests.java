@@ -1,9 +1,12 @@
 package com.nowcoder.community;
 
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
-
+import org.apache.commons.lang3.time.DateUtils;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -111,11 +114,21 @@ public class CommunityApplicationTests implements ApplicationContextAware{
 		}
 	}
 
-	//@Test
+	@Test
 	public void test(){
-		String numbers="01234";
-		numbers=numbers.substring(numbers.lastIndexOf("1"));
-		System.out.println(numbers);
+		//String numbers="01234";
+		//numbers=numbers.substring(numbers.lastIndexOf("1"));
+		//System.out.println(numbers);
+		System.out.println("---------------------------");
+		String time="2022-10-05 22:35:00";
+		try {
+			Date date=DateUtils.parseDate(time, "yyyy-MM-dd HH:mm:ss");
+			System.out.println(date);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 	

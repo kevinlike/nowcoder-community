@@ -136,7 +136,7 @@ public class AlphaService {
     }
 
     //定时任务
-    @Scheduled(initialDelay=5000,fixedRate = 1000)
+    //@Scheduled(initialDelay=5000,fixedRate = 1000)
     public void execute2(){
         logger.debug("execute2");
     }

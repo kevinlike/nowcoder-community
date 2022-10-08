@@ -10,7 +10,8 @@ import com.nowcoder.community.entity.DiscussPost;
 @Mapper
 public interface DiscussPostMapper {
 
-    List<DiscussPost> selectDiscussPosts(int userId,int offset,int limit);
+    //重构时加入oederMode，默认为0，当为1时表示希望按照热度排序
+    List<DiscussPost> selectDiscussPosts(int userId,int offset,int limit,int orderMode);
 
 
     //@Param注解用于给参数取别名，
@@ -27,4 +28,7 @@ public interface DiscussPostMapper {
     int updateType(int id,int type);
 
     int updateStatus(int id,int status);
+
+    int updateScore(int id,Double score);
+
 }

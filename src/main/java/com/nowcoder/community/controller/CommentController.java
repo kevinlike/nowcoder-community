@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +26,7 @@ import com.nowcoder.community.service.LikeService;
 import com.nowcoder.community.service.UserService;
 import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.HostHolder;
+import com.nowcoder.community.util.RedisKeyUtil;
 import com.nowcoder.community.util.TimeUtil;
 
 @Controller
@@ -48,6 +50,9 @@ public class CommentController implements CommunityConstant{
 
     @Autowired
     private EventProducer eventProducer;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     //添加评论
     @RequestMapping(path="/add/{discussPostId}",method = RequestMethod.POST)
@@ -83,6 +88,10 @@ public class CommentController implements CommunityConstant{
                 .setEntityType(ENTITY_TYPE_POST)
                 .setEntityId(discussPostId);//因为在discusspost-mapper中insertpost处设置了keyProperty，所以这里可以直接取到id
             eventProducer.fireEvent(event);
+
+            //重新计算帖子的热度得分
+            String redisKey=RedisKeyUtil.getPostScoreKey();
+            redisTemplate.opsForSet().add(redisKey, discussPostId);
         }
         
         
