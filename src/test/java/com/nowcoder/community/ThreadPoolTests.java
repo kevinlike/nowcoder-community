@@ -119,7 +119,7 @@ public class ThreadPoolTests {
     }
 
     //6.Spring定时任务线程池（简化）
-    @Test
+    //@Test
     public void testThreadPoolTaskSchedulerSimple(){
         //不需要手动调用，会自动执行
         //alphaService.execute2();

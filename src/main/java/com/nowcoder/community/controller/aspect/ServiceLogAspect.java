@@ -17,8 +17,8 @@ import org.springframework.web.servlet.mvc.condition.RequestConditionHolder;
 
 import com.nowcoder.community.util.TimeUtil;
 
-@Component
-@Aspect
+// @Component
+// @Aspect
 public class ServiceLogAspect {
     
 

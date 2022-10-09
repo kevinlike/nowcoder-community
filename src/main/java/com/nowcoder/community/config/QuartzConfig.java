@@ -82,7 +82,7 @@ public class QuartzConfig {
         factoryBean.setName("postScoreRefreshTrigger");
         factoryBean.setGroup("communityTriggerGroup");
         //设置任务的重复时间间隔ms
-        factoryBean.setRepeatInterval(1000*10);
+        factoryBean.setRepeatInterval(1000*60*5);
         //trigger需要存储任务的状态，这里指出其存储的对象,这里用的是默认类型
         factoryBean.setJobDataMap(new JobDataMap());
         return factoryBean;

@@ -15,7 +15,7 @@ public class QuartzTests {
     @Autowired
     private Scheduler scheduler;
 
-    @Test
+    //@Test
     public void testDeleteJob(){
         try{
             boolean res=scheduler.deleteJob(new JobKey("alphaJob","alphaJobGroup"));
